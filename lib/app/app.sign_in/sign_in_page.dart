@@ -1,3 +1,4 @@
+import 'package:course_google/app/app.sign_in/sign_in_button.dart';
 import 'package:course_google/commons_widget/custom_raised_button.dart';
 import 'package:flutter/material.dart';
 
@@ -35,33 +36,48 @@ class _BuildContext extends StatelessWidget {
               style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.w600),
             ),
             SizedBox(
-              height: 8.0,
+              height: 48.0,
             ),
-            CustomRaisedButtom(
-              child: Text(
-                'Sign in whith Google',
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 15.0,
-                ),
-              ),
+            SignInButton(
+              text: 'Sign in whith Google',
+              textColor: Colors.black87,
               color: Colors.white,
-              borderRadius: 4.0,
               onPressed: () {},
             ),
             SizedBox(
               height: 8.0,
             ),
-            CustomRaisedButtom(
-              child: Text(
-                'Sign in whith Facebook',
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 15.0,
-                ),
+            SignInButton(
+              text: 'Sign in whith Facebook',
+              textColor: Colors.white,
+              color: Color(0xFF334D92),
+              onPressed: () {},
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            SignInButton(
+              text: 'Sign in whith email',
+              textColor: Colors.white,
+              color: Colors.teal[700],
+              onPressed: () {},
+            ),
+            SizedBox(height: 8.0),
+            Text(
+              'or',
+              style: TextStyle(
+                fontSize: 16.0,
+                color: Colors.black87,
               ),
-              color: Colors.white,
-              borderRadius: 4.0,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            SignInButton(
+              text: 'Go anonymous',
+              textColor: Colors.black,
+              color: Colors.lime[300],
               onPressed: () {},
             ),
           ],
