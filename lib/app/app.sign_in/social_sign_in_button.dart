@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class SocialSignInButton extends CustomRaisedButtom {
   SocialSignInButton({
-    String assetName,
+    @required String assetName,
     String text,
     Color color,
     Color textColor,
