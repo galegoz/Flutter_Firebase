@@ -1,4 +1,5 @@
 import 'package:course_google/app/app.sign_in/sign_in_button.dart';
+import 'package:course_google/app/app.sign_in/social_sign_in_button.dart';
 import 'package:course_google/commons_widget/custom_raised_button.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +39,8 @@ class _BuildContext extends StatelessWidget {
             SizedBox(
               height: 48.0,
             ),
-            SignInButton(
+            SocialSignInButton(
+              assetName: 'images/google-logo.png',
               text: 'Sign in whith Google',
               textColor: Colors.black87,
               color: Colors.white,
@@ -47,7 +49,8 @@ class _BuildContext extends StatelessWidget {
             SizedBox(
               height: 8.0,
             ),
-            SignInButton(
+            SocialSignInButton(
+              assetName: 'images/facebook-logo.png',
               text: 'Sign in whith Facebook',
               textColor: Colors.white,
               color: Color(0xFF334D92),
