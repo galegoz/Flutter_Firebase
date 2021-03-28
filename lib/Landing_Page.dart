@@ -2,6 +2,8 @@ import 'package:course_google/app/app.sign_in/sign_in_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import 'Home_page.dart';
+
 class LandingPage extends StatefulWidget {
   @override
   _LandingPageState createState() => _LandingPageState();
@@ -10,11 +12,21 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   User _user;
 
+  void _updateUser(User user) {
+    setState(() {
+      _user = user;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_user == null) {
-      return SignInPage();
+      return SignInPage(
+        onSignIn: _updateUser,
+      );
     }
-    return Container();
+    return HomePage(
+      onSignOut: () => _updateUser(null),
+    );
   }
 }
